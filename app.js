@@ -6,7 +6,7 @@ const randomQuote = {
       quotes,
       displayedQuote: quotes[0],
       test: 'test',
-      tweetLink: "http://www.twitter.com/intent/tweet?text="+this.displayedQuote.quote
+      tweetLink: "http://www.twitter.com/intent/tweet?text="
     }
   },
   methods: {
