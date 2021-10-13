@@ -14,12 +14,20 @@
     <div id="app" class="flex flex-col justify-center items-center h-screen">
 
       <!-- Quote card -->
-      <div id="card" class="mx-auto flex flex-col justify-center p-4 border-2 shadow-lg">
-        <div id="card-header" class="mx-auto">
+      <div id="quote-box" class="mx-auto flex flex-col justify-center p-4 border-2 shadow-lg max-w-md">
+        
+        <!-- <div id="card-header" class="mx-auto">
           <h1>Random Quote Card</h1>
+        </div> -->
+
+        <div id="card-body" class="flex flex-col">
+          <p id="text" class="text-2xl">"{{ quotes[0].quote }}"</p>
+          <p id="author" class="text-right">- {{ quotes[0].author }}</p>
+          
         </div>
-        <div id="card-body">
-          <p>{{ quotes[0].quote }}</p>
+        <div id="card-footer" class="flex justify-evenly mt-6">
+          <button id="new-quote" class="rounded bg-blue-800 text-white px-2">New Quote</button>
+          <button id="tweet-quote">Tweet Quote</button>
         </div>
       </div>
       <!-- end quote card -->
@@ -28,5 +36,6 @@
     <script src="https://unpkg.com/vue@next"></script>
     <script src="./quotes.js"></script>
     <script src="./app.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>
