@@ -8,12 +8,25 @@
     <link rel="stylesheet" href="public/styles.css">
   </head>
   <body>
-    <header>
+    <header class="flex justify-center bg-black text-white py-2">
       <h1>Random Quote Machine</h1>
     </header>
-    <div id="app">
+    <div id="app" class="flex flex-col justify-center items-center h-screen">
+
+      <!-- Quote card -->
+      <div id="card" class="mx-auto flex flex-col justify-center p-4 border-2 shadow-lg">
+        <div id="card-header" class="mx-auto">
+          <h1>Random Quote Card</h1>
+        </div>
+        <div id="card-body">
+          <p>{{ quotes[0].quote }}</p>
+        </div>
+      </div>
+      <!-- end quote card -->
       
     </div>
     <script src="https://unpkg.com/vue@next"></script>
+    <script src="./quotes.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
