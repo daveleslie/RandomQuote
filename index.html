@@ -28,7 +28,7 @@
         </div>
         <hr>
         <div id="card-footer" class="flex justify-between mt-2">
-          <a id="tweet-quote" :href="tweetLink">
+          <a id="tweet-quote" :href=encodeURI(`${tweetLink}${tweetQuote}`)>
             <!-- Tweet Quote -->
             <i class="fa fa-twitter fa-2x p-2 text-white bg-blue-400 rounded"></i>
           </a>
@@ -39,8 +39,8 @@
      
     </div> <!--end app-->
     <script src="https://unpkg.com/vue@next"></script>
-    <script src="./quotes.js"></script>
-    <script src="./app.js"></script>
+    <!-- <script src="./quotes.js"></script> -->
+    <script type="module" src="./app.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>

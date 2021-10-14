@@ -1,6 +1,7 @@
 {
   "name": "randomquote",
   "version": "1.0.0",
+  "type": "module",
   "description": "Random Quote Generator Project for Free Code Camp Front End Libraries certification",
   "main": "index.html",
   "scripts": {

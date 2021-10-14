@@ -1,4 +1,5 @@
 // const {quotes} = require("./quotes.js")
+import { quotes } from "./quotes.js"
 
 const randomQuote = {
   data() {
@@ -6,7 +7,12 @@ const randomQuote = {
       quotes,
       displayedQuote: quotes[0],
       test: 'test',
-      tweetLink: "http://www.twitter.com/intent/tweet?text="
+      tweetLink: 'http://www.twitter.com/intent/tweet?text='
+    }
+  },
+  computed: {
+    tweetQuote() {
+      return `${this.displayedQuote.quote} - ${this.displayedQuote.author}`
     }
   },
   methods: {
