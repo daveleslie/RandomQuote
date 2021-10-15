@@ -11,6 +11,7 @@
   "author": "David Leslie",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.23.0",
     "tailwindcss": "^2.2.16"
   }
 }

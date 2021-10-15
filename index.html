@@ -5,39 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Quote Machine</title>
-    <link rel="stylesheet" href="public/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="public/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
   </head>
   <body>
-    <header class="flex justify-center bg-black text-white py-2">
+    <header class="fixed w-full flex justify-center bg-black text-white py-2">
       <h1>Random Quote Machine</h1>
     </header>
-    <div id="app" class="flex flex-col justify-center items-center h-screen">
-
+    <div
+      id="app"
+      class="flex flex-col justify-center items-center h-screen"
+      v-cloak
+    >
       <!-- Quote card -->
-      <div id="quote-box" class="mx-auto flex flex-col justify-center p-4 border-2 shadow-lg max-w-lg">
-        
-        <!-- <div id="card-header" class="mx-auto">
-          <h1>Random Quote Card</h1>
-        </div> -->
-
+      <div
+        id="quote-box"
+        v-if="quoteArr.quotes !== undefined"
+        class="
+          mx-auto
+          flex flex-col
+          justify-center
+          p-4
+          border-2
+          shadow-lg
+          max-w-lg
+        "
+      >
         <div id="card-body" class="flex flex-col mt-2 mb-6">
-          <p id="text" class="text-2xl font-medium">"{{ displayedQuote.quote }}"</p>
-          <p id="author" class="text-right">- {{ displayedQuote.author }}</p>
-          
+          <p id="text" class="text-2xl font-medium">"{{ quote }}"</p>
+          <p id="author" class="text-right">- {{ author }}</p>
         </div>
-        <hr>
+        <hr />
         <div id="card-footer" class="flex justify-between mt-2">
-          <a id="tweet-quote" :href=encodeURI(`${tweetLink}${tweetQuote}`)>
-            <!-- Tweet Quote -->
-            <i class="fa fa-twitter fa-2x p-2 text-white bg-blue-400 rounded"></i>
+          <!-- Tweet Quote link -->
+          <a id="tweet-quote" :href="encodeURI(`${tweetLink}${tweetQuote}`)">
+            <i
+              class="fa fa-twitter fa-2x p-2 text-white bg-blue-400 rounded"
+            ></i>
           </a>
-          <button @click="newQuote()" id="new-quote" class="bg-blue-800 text-white p-2 rounded">New Quote</button>
+          <button
+            @click="newQuote()"
+            id="new-quote"
+            class="bg-blue-800 text-white p-2 rounded"
+          >
+            New Quote
+          </button>
         </div>
       </div>
       <!-- end quote card -->
-     
-    </div> <!--end app-->
+    </div>
+    <!--end app-->
     <script src="https://unpkg.com/vue@next"></script>
     <!-- <script src="./quotes.js"></script> -->
     <script type="module" src="./app.js"></script>
